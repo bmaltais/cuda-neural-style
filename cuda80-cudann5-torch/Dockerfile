@@ -1,4 +1,4 @@
-FROM nvidia/cuda:8.0-cudnn7-devel-ubuntu14.04
+FROM nvidia/cuda:8.0-cudnn5-devel-ubuntu14.04
 
 RUN mkdir /code
 WORKDIR /code
@@ -15,3 +15,4 @@ RUN git clone https://github.com/torch/distro.git torch --recursive
 WORKDIR /code/torch
 RUN bash install.sh
 ENV PATH=$PATH:/code/torch/install/bin/
+ENV CUDNN_PATH="/usr/lib/x86_64-linux-gnu/libcudnn.so.5"
