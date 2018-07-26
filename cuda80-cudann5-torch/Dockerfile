@@ -3,12 +3,14 @@ FROM nvidia/cuda:8.0-cudnn5-devel-ubuntu14.04
 RUN mkdir /code
 WORKDIR /code
 
-RUN apt-get update -qqy && apt-get install -qqy \
+RUN apt-get update -qqy && \
+    apt-get install -qqy \
                 ca-certificates \
                 git curl wget \
                 software-properties-common \
                 --no-install-recommends && \
-    apt-get -qqy clean && rm -rf /var/lib/apt/lists/*
+    apt-get -qqy clean && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN curl -s https://raw.githubusercontent.com/torch/ezinstall/master/install-deps | bash
 RUN git clone https://github.com/torch/distro.git torch --recursive

@@ -23,4 +23,5 @@ ENV PATH=$PATH:/code/neural-style/
 
 # Copy some extra models to model directory
 COPY ["models/*" ,"models/"]
+COPY ["lua/*" ,"./"]
 
