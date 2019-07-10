@@ -23,7 +23,17 @@ docker build -t cudnn-neural-style .
 
 docker tag cudnn-neural-style bmaltais/cudnn-neural-style
 
-docker push <username>/cudnn-neural-style
+docker push bmaltais/cudnn-neural-style
+
+## Build neural-style-skimage container:
+
+cd neural-style-skimage
+
+docker build -t cudnn-neural-style-skimage .
+
+docker tag cudnn-neural-style-skimage bmaltais/cudnn-neural-style-skimage
+
+docker push bmaltais/cudnn-neural-style-skimage
 
 ## Run neural-style:
 
