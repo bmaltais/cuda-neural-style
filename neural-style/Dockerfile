@@ -10,7 +10,8 @@ RUN apt-get update -qqy && \
 RUN /code/torch/install/bin/luarocks install loadcaffe
 RUN /code/torch/install/bin/luarocks install cudnn
 
-RUN git clone --depth 1 https://github.com/jcjohnson/neural-style.git
+# RUN git clone --depth 1 https://github.com/jcjohnson/neural-style.git
+RUN git clone --depth 1 https://github.com/bmaltais/neural-style.git
 
 WORKDIR /code/neural-style
 
