@@ -37,6 +37,6 @@ docker push bmaltais/cudnn-neural-style-skimage
 
 ## Run neural-style:
 
-nvidia-docker run --rm -it -v ~/images:/code/neural-style/images bmaltais/cudnn-neural-style
+docker run --gpus all --rm -it -v ~/images:/code/neural-style/images bmaltais/cudnn-neural-style
 
 where "~/images" is your path to your images folder
