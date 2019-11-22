@@ -35,8 +35,24 @@ docker tag cudnn-neural-style-skimage bmaltais/cudnn-neural-style-skimage
 
 docker push bmaltais/cudnn-neural-style-skimage
 
+## Build neural-style-pt container:
+
+cd neural-style-pt
+
+docker build -t cudnn-neural-style-pt .
+
+docker tag cudnn-neural-style-pt bmaltais/cudnn-neural-style-pt
+
+docker push bmaltais/cudnn-neural-style-pt
+
 ## Run neural-style:
 
 nvidia-docker run --rm -it -v ~/images:/code/neural-style/images bmaltais/cudnn-neural-style
+
+where "~/images" is your path to your images folder
+
+## Run neural-style:
+
+nvidia-docker run --rm -it -v ~/images:/root/neural-style-pt/images bmaltais/cudnn-neural-style-pt
 
 where "~/images" is your path to your images folder
